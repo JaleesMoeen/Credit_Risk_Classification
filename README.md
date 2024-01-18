@@ -17,11 +17,14 @@ The dataset contains financial information related to loan applicants, including
 ### Target Variable
 
 The provided value_counts indicates the distribution of the target variable 'loan_status' in the dataset:
-0    75036
-1     2500
+high-risk appicants is   75036 and low-risk applicants is 2500
 
 
 ### Stages of Machine Learning Process 
+
+
+![Alt text](images/2_ML_process.png)
+
 
 Split the data into features(X) and labels(y).
 
@@ -44,6 +47,56 @@ Resampling ensures a more equitable representation of both classes during model 
 
 The choice of logistic regression as the modeling algorithm provides a balance between interpretability and predictive power.
 
+
+
+## Results
+
+### Machine Learning Model 1:
+
+#### Description of Model 1 Accuracy, Precision, and Recall Scores
+
+Accuracy:  The model classifies the data points upto 95% corrected as the balanced accuracy is 0.99
+
+Precision: Class 1 (High-Risk Loan) has a slightly lower precision ie. 85%, indicating a small proportion of false positives.
+
+Recall Score: An average--the model had 99% recall in predicting low-risk loans, but 91% recall in predicting high-risk loans.
+
+
+### Machine Learning Model 2:
+
+#### Description of Model 2 Accuracy, Precision, and Recall Scores
+
+Accuracy:  The model classifies the resampled data points corrected with accuracy of 99% for both the high risk and low risk.
+
+Precision: Preceision is same for both the high and low risk i.e. 99%
+
+Recall Score: Prediciting the values through recall is 99%.
+
+High accuracy and high recall for the risky loan applicants further supports the overall robustness of the model.
+
+
+## Summary
+
+### Recommendation
+
+Machine Learning Model 2, trained with resampled data, outperforms Model 1, particularly in predicting high-risk loans.
+
+Model 2 shows higher precision and recall for high-risk loans, indicating improved effectiveness in identifying potential risks.
+
+
+### Performance
+
+Although, accuracy of model 1 is high, but  the recall for risky loan applicants is not high enough ,as it should be comapred to the recall for low-risk applicants.
+
+Model 2 provides high accuracy and high recall for the risky loan applicants further supports the overall robustness of the model.
+
+### Considerations
+
+We business domain is also depends on the cosideration ,as banks have senisitive concern with large volume of funds, so the model should be more accruate for high risk applicants. So, we shoud prefer high accuracy and high recall.
+
+## Author
+
+## [Jalees Moeen GitHub](https://github.com/JaleesMoeen)
 
 
 
